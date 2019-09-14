@@ -25,6 +25,11 @@ currently-active environment.  Then you can do cool stuff like
     cycloid_tangent_vector = D(t -> [cos(2*pi*t), sin(2*pi*t) t])
     print(cycloid_tangent_vector(2)) # It points somewhere...
 
+Forward-mode autodiff is efficient for functions from R to R or R to R^N; if you
+have a function from R^N to R, check out the partner
+[BackwardAutodiff](https://github.com/Farr-PHY-604/BackwardAutodiff.jl) module,
+which can efficiently compute gradients of R^N to R functions.  
+
 TODO: permit differentiation wrt more than one variable at a time (i.e.
 D(D(sin)) = sin).  Expand derivatives to more functions.  Maybe implement
 backward Autodiff?  More stress testing!
